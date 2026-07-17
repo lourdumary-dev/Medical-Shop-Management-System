@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Search Medicine</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <h1>SEARCH MEDICINE</h1>
+
+    <form action="/search_medicine" method="POST">
+
+        <input
+            type="text"
+            name="medicine_name"
+            placeholder="Enter Medicine Name"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">
+            SEARCH
+        </button>
+
+    </form>
+
+    <br>
+    <center>
+    {% if medicine %}
+
+    <table border="1" cellpadding="10">
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Expiry</th>
+        </tr>
+
+        <tr>
+
+            <td>{{ medicine[0] }}</td>
+            <td>{{ medicine[1] }}</td>
+            <td>{{ medicine[2] }}</td>
+            <td>{{ medicine[3] }}</td>
+            <td>{{ medicine[4] }}</td>
+            <td>{{ medicine[5] }}</td>
+
+        </tr>
+
+    </table>
+
+    {% endif %}
+    </center>
+</div>
+
+</body>
+
+</html>

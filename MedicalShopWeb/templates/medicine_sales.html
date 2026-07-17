@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Medicine Sales Report</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<h1>MEDICINE SALES REPORT</h1>
+
+<table border="1">
+
+<tr>
+    <th>Medicine Name</th>
+    <th>Total Quantity Sold</th>
+    <th>Total Sales Amount</th>
+</tr>
+
+{% for medicine in report %}
+
+<tr>
+    <td>{{ medicine[0] }}</td>
+    <td>{{ medicine[1] }}</td>
+    <td>₹{{ medicine[2] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br><br>
+
+<a href="/dashboard">
+    <button>Back to Dashboard</button>
+</a>
+
+</div>
+
+</body>
+</html>

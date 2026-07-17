@@ -1,0 +1,101 @@
+body{
+    margin:0;
+    padding:20px;
+    font-family:Arial, sans-serif;
+
+    /* Local Image */
+    background-image: url("../images/medical_bg.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.dashboard{
+
+    width:450px;
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:rgba(255,255,255,0.92);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 25px rgba(0,0,0,0.35);
+
+    text-align:center;
+}
+
+h1{
+    color:#0b7285;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+h2{
+    color:#444;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+h3{
+    font-size:20px;
+    color:#222;
+    margin:12px 0;
+}
+
+hr{
+    border:none;
+    border-top:2px solid #ddd;
+    margin:20px 0;
+}
+
+input{
+    width:90%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+button{
+    width:95%;
+    padding:12px;
+    margin:6px 0;
+    border:none;
+    border-radius:8px;
+    background:#0b7285;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#087f5b;
+    transform:scale(1.03);
+}
+
+a{
+    text-decoration:none;
+}
+
+.dashboard::-webkit-scrollbar{
+    width:8px;
+}
+
+.dashboard::-webkit-scrollbar-thumb{
+    background:#0b7285;
+    border-radius:10px;
+}

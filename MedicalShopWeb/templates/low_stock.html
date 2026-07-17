@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Low Stock Medicines</title>
+</head>
+<body>
+
+<h1>LOW STOCK MEDICINES</h1>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Medicine Name</th>
+    <th>Company</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Expiry Date</th>
+</tr>
+
+{% for medicine in medicines %}
+<tr>
+    <td>{{ medicine[0] }}</td>
+    <td>{{ medicine[1] }}</td>
+    <td>{{ medicine[2] }}</td>
+    <td>{{ medicine[3] }}</td>
+    <td>{{ medicine[4] }}</td>
+    <td>{{ medicine[5] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Expiry Medicines Alert</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<h1>EXPIRY MEDICINES ALERT</h1>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Medicine Name</th>
+    <th>Company</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Expiry Date</th>
+</tr>
+
+{% for medicine in medicines %}
+
+<tr>
+    <td>{{ medicine[0] }}</td>
+    <td>{{ medicine[1] }}</td>
+    <td>{{ medicine[2] }}</td>
+    <td>₹{{ medicine[3] }}</td>
+    <td>{{ medicine[4] }}</td>
+    <td>{{ medicine[5] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br><br>
+
+<a href="/dashboard">
+    <button>Back to Dashboard</button>
+</a>
+
+</div>
+
+</body>
+</html>

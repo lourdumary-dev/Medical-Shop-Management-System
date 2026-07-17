@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <h1>MEDICAL SHOP MANAGEMENT SYSTEM</h1>
+
+        <h2>Welcome Admin</h2>
+        <hr>
+
+        <h3>📦 Total Medicines : {{ total_medicines }}</h3>
+
+        <h3>💰 Total Sales : ₹{{ total_sales }}</h3>
+
+        <h3>📉 Low Stock Medicines : {{ low_stock }}</h3>
+
+        <h3>⚠️ Expiry Medicines : {{ expiry }}</h3>
+
+        <hr>
+
+        <div class="buttons">
+
+            <a href="/add_medicine">
+                <button>Add medicine</button>
+            </a>
+            <a href="/view_medicines">
+                <button>View Medicines</button>
+            </a>
+
+            <a href="/search_medicine">
+                <button>Search Medicine</button>
+            </a>
+            <a href="/update_medicine">
+                <button>Update Medicine</button>
+            </a>
+
+            <a href="/delete_medicine">
+                <button>Delete Medicine</button>
+            </a>
+            <a href="/billing">
+                <button>Billing</button>
+            </a>
+
+            <a href="/sales_history">
+                <button>Sales History</button>
+            </a>
+            <a href="/low_stock">
+                <button>Low Stock Medicines</button>
+            </a>
+            <a href="/today_sales">
+                <button>Today's Sales Report</button>
+            </a>
+            <a href="/total_sales">
+                <button>Total Sales Amount</button>
+            </a>
+
+            <a href="/expiry_medicines">
+                <button>Expiry Medicines Alert</button>
+            </a>
+            <a href="/medicine_sales">
+                <button>Medicine Sales Report</button>
+            </a>
+            <a href="/logout">
+                <button>Logout</button>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
