@@ -9,11 +9,11 @@ app.secret_key = "medical_shop_secret"
 connection = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Sql@Server#2025!Aa9",
+    password="YOUR_PASSWORD",
     database="medical_shop"
 )
 
-cursor = connection.cursor()
+cursor = connection.cursor(buffered=True)
 
 
 # Login Page
@@ -209,6 +209,7 @@ def generate_bill():
     cursor.execute(query, (medicine_name,))
 
     medicine = cursor.fetchone()
+    cursor.fetchall()
 
     if medicine:
 
